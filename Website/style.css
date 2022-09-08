@@ -1,0 +1,20 @@
+html{
+    background-color: hsl(80, 41%, 89%);
+}
+#intro{
+    position: absolute;
+    font-size: 50px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+h1 {
+color: hsl(195, 95%, 25%)
+
+}
+h2{
+
+}
+#myPicture{
+}
