@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import quoteBox from "./components/quoteBox";
+import QuoteBox from "./components/quoteBox";
 
 function App() {
   return (

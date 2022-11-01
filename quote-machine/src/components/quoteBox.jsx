@@ -1,9 +1,30 @@
 import React, { Component } from "react";
+import 'bootstrap/dist/css/bootstrap.css';
 
-class quoteBox extends Component {
+
+class QuoteBox extends Component {
+  state={
+    quote: "",
+  }
+  renderQuotes() {
+    return(
+      <div id="background" className="">
+        <p id="author">Lorem, ipsum.</p>
+        <button id="new-quote" className="btn btn-danger">New Quote</button>
+        <a href="www.twitter.com/share" id="tweet-quote" className="bi bi-twitter">tweet</a>
+        
+      </div>
+     
+    )
+  }
   render() {
-    return <div></div>;
+    return(
+     <div>
+      {this.renderQuotes()}
+     </div>
+    );
+  
   }
 }
 
-export default quoteBox;
+export default QuoteBox;
