@@ -1,0 +1,122 @@
+body{
+  height: 3000px;
+}
+p{
+  font-family: roboto;
+  margin:0;
+}
+.navbar{
+  position:fixed;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  border-bottom-width: 1px;
+  border-bottom-color: black;
+  border-bottom-style:solid;
+
+}
+.photo-box{
+  width:40px;
+  height:40px;
+}
+.photo{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 50px;
+}
+
+.username{
+  margin-left: 20px;
+  font-weight: 900;
+}
+.buttons{
+  margin-left: 60%;
+  display: flex;
+}
+
+.add-friend-button{
+  margin-right: 5px;
+  background-color: rgba(0, 85, 255, 0.834);
+  color: white;
+  height: 30px;
+  width: 90px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size:14px;
+}
+
+.message-button{
+  background-color: rgba(219, 219, 219, 0.924);
+  color: black;
+  height: 30px;
+  border:none;
+  width: 90px;
+  border-radius: 5px;
+    font-weight: 600;
+  font-size:14px;
+}
+
+.discord{
+  display: flex;
+  margin-top: 68px;
+  position:fixed;
+  left:0px;
+  top:0px;
+  bottom:0px;
+  width: 100px;
+  background-color: rgba(40, 40, 40, 0.933);
+  justify-content: center;
+ 
+}
+
+.user-photos{
+  width: 60px;
+  height:60px;
+}
+
+.user-picture{
+  margin-top: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 30px;
+}
+
+.channel-info{
+  background-color: rgba(54, 53, 53, 0.919);
+  margin-top: 68px;
+  margin-left:100px;
+  padding-left:10px;
+  position: inherit;
+  top:0;
+  bottom:0;
+  left:0;
+  width: 180px;
+}
+.info{
+  margin-top:10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-text{
+  color:white;
+
+}
+.plus-sign{
+  margin-right: 10px;
+  font-size: 30px;
+  color: rgb(209, 209, 209)
+}
+
+.channel-name{
+  color: rgb(215, 214, 214);
+  font-weight: 300;
+  margin-top: 20px;
+  font-size: 18px;
+}

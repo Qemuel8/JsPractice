@@ -1,0 +1,69 @@
+p{
+  margin: 0;
+  font-family: roboto;
+}
+div{
+    font-family: roboto;
+}
+
+.mail{
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.474);
+  width: 430px;
+  height:330px;
+
+}
+.inbox-name{
+  margin-left: 15px;
+  padding-top:10px;
+  margin-bottom: 20px;
+  color: rgb(96 96 96);
+  font-weight: 400;
+}
+.info-box{
+  display: flex;
+  width: 400px;
+  margin-left: 15px;
+  margin-bottom: 30px;
+}
+
+.image-box{
+  width: 52px;
+  height:52px;
+}
+
+.user-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position: top;
+  border-radius: 28px;
+
+}
+.text-box{
+  flex: 1;
+  margin-left:10px;
+}
+.top-box{
+  display: flex;
+
+}
+
+.sender-name{
+  font-weight: 700;
+  width: 250px;
+  font-size: 18px;
+}
+
+.email-title{
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.email-body{
+  color: rgb(96 96 96);
+  font-weight: 500;
+}
+.time{
+    color: rgb(96 96 96);
+  font-weight: 400;
+}

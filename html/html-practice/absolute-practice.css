@@ -1,0 +1,91 @@
+body{
+  height: 3000px
+}
+.div{
+  font-family: Roboto;
+}
+.close-button{
+display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 500px;
+  background-color: transparent;
+  color:transparent;
+  width:540px;
+  height:220px;
+}
+.close-button:hover{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 500px;
+  background-color: rgba(128, 128, 128, 0.636);
+  color:white;
+  width:540px;
+  height:220px;
+
+}
+
+.box{
+
+  position: absolute;
+  left:100px;
+  right: 100px;
+  bottom: 100px;
+  top: 100px;
+  background-color: rgb(214, 209, 209);
+  width: 540px;
+  height: 720px;
+}
+
+.time{
+  position: absolute;
+  left:400px;
+  top: 30px;
+  background-color: black;
+  color:white;
+  width: 100px;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 3px;
+  font-size: 22px;
+  font-weight: 500;
+}
+.add-to-cart-button{
+  border-style: transparent;
+  border-color: transparent;
+  background-color: transparent;
+  color: transparent;
+  height:60px;
+  width:180px
+}
+
+
+.add-to-cart-button:hover{
+  border-style: solid;
+  border-color: black;
+  background-color: white;
+  color: black;
+  height:60px;
+  width:180px
+}
+
+.image{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  height: 600px;
+  width: 500px;
+}
+.image-box{
+  width:100%;
+  height:100%;
+
+  display: inline-block;
+  position: relative;
+}
