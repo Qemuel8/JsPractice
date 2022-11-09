@@ -38,27 +38,12 @@ async componentDidMount(){
 onInput =(event) =>{
 	let object= {__html: marked.parse(event.target.value).replace(/\r/g, '<br>')}
       this.setState(() => ({
-        input: object
+        input: object,
+        text: event.target.value
       }))
     }
 
 
-    setValue =(x) =>{
-      const required = true;
-      const disabled = false;
-      if(x === false){
-              return(
-          <textarea id="editor"   onChange={this.onInput}>
-          </textarea>
-      );
-      }else{
-        return(<textarea id="editor"  value={this.state} onChange={this.onInput}>
-          </textarea>);
-
-          }
-
-
-    }
 
   render() { 
     return (
@@ -68,7 +53,7 @@ onInput =(event) =>{
               <img className='button-image' src={anime}></img>
             </button>
           <div id="editor-label">Editor</div>
-      <textarea id="editor"  value={this.state.text} onChange={this.onInput}>
+      <textarea id="editor"  value={this.state.text}  onChange={this.onInput}>
           </textarea>
           </div>
           <div className='preview-box'>
