@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
 import getAudio from '../audio/audio'
 import './drum-machine.css'
-import audio1 from "../audio/Cev_H2.mp3"
-import audio2 from "../audio/Dsc_Oh.mp3"
-import audio3 from "../audio/Heater-1.mp3"
-import audio4 from "../audio/Heater-2.mp3"
-import audio5 from "../audio/Heater-3.mp3"
-import audio6 from "../audio/Heater-4_1.mp3"
-import audio7 from "../audio/Heater-6.mp3"
-import audio8 from "../audio/Kick_n_Hat.mp3"
-import audio9 from "../audio/RP4_KICK_1.mp3"
+import {useEffect} from 'react';
 
+const audio1 = require("../audio/Cev_H2.mp3");
+const audio2 = require("../audio/Dsc_Oh.mp3");
+const audio3 = require("../audio/Heater-1.mp3");
+const audio4 = require("../audio/Heater-2.mp3");
+const audio5 = require("../audio/Heater-3.mp3");
+const audio6 = require("../audio/Heater-4_1.mp3");
+const audio7 = require("../audio/Heater-6.mp3");
+const audio8 = require("../audio/Kick_n_Hat.mp3");
+const audio9 = require("../audio/RP4_KICK_1.mp3");
+const drum = require("./drum.jpg")
 
 
 
@@ -18,45 +20,107 @@ class DrumMachine extends Component {
   constructor(props){
     super(props)
     this.state = {
-      audios:{
-audio1 : new Audio(audio1),
-audio2 : new Audio(audio2),
-audio3 : new Audio(audio3),
-audio4 : new Audio(audio4),
-audio5 : new Audio(audio5),
-audio6 : new Audio(audio6),
-audio7 : new Audio(audio7),
-audio8 : new Audio(audio8),
-audio9 : new Audio(audio9),
-}
+      audios:[
+      {
+        audio : new Audio(audio1),
+        key: "Q",
+        sound:"bim"
+      },
+      {
+        audio : new Audio(audio2),
+        key: "W",
+        sound:"bam"
+      },
+      {
+        audio : new Audio(audio3),
+        key: "E",
+        sound:"bom"
+      },
+       {
+        audio : new Audio(audio4),
+        key: "A",
+        sound:"zim"
+      },
+      {
+        audio : new Audio(audio5),
+        key: "S",
+        sound:"zam"
+      },
+       {
+        audio : new Audio(audio6),
+        key: "D",
+        sound:"zom"
+      },
+       {
+        audio : new Audio(audio7),
+        key: "Z",
+        sound:"ts"
+      },
+      {
+        audio : new Audio(audio8),
+        key: "X",
+        sound:"ks"
+      },
+       {
+        audio : new Audio(audio9),
+        key: "C",
+        sound:"ss"
+      },
+    ],
+    currentKey: "",
       } 
+
+     
+
+  }
+
+//    <button className="drum-pad" id='C' onClick={() => this.togglePlay(this.state.audios.audio9)} >C</button> is a working button
+
+  handleKeyDown = (event) =>{
+  console.log(event.key.toUpperCase())
+  let audioPlay = document.getElementById(event.key.toUpperCase()).play();
+  //console.log(audioPlay);
+  if(audioPlay !== undefined){
+    audioPlay.then(function() {
+    }).catch(function(error) {
+
+    })
+  }
+  this.setState(()=>({
+    currentKey: event.key.toUpperCase(),     
+  }))
+}
+
+  togglePlay = (key) => {
+    let audioPlay = document.getElementById(key).play();
+    console.log(audioPlay);
+    if(audioPlay !== undefined){
+      audioPlay.then(function() {
+      }).catch(function(error) {
+
+      })
+    }
+    this.setState(()=>({
+      currentKey: key,     
+    }))
+      
   }
 
 
-
-
-  togglePlay = (currentAudio) => {
-      currentAudio.play();
-  }
- 
   render() { 
     return (
-      <div id="container">
-<div id='drum-machine'> 
-  <p id="drum-name">Drum Machine</p>
+    <div id="container" tabIndex={0} onKeyDown={this.handleKeyDown}>
+    <div id='drum-machine'> 
+    <img id="drum-image" src={drum}></img>
+    <p id="drum-name">Drum Machine</p>
+      {this.state.audios.map((drum)=>(
 
+        <button onClick={()=> this.togglePlay(drum.key)}  className='drum-pad' id={drum.sound} key={drum.sound} >{drum.key}<audio preload  className='clip' id={drum.key}  src={drum.audio.src}  ></audio>
+        </button>
 
-      <button className="drum-pad" id='Q' ><audio className='clip' id='Q' onClick={() => this.togglePlay(this.state.audios.audio1)} src={this.state.audios.audio1} >Q</audio></button>
-      <button className="drum-pad" id='W' onClick={() => this.togglePlay(this.state.audios.audio2)} >W</button>
-      <button className="drum-pad" id='E' onClick={() => this.togglePlay(this.state.audios.audio3)} >E</button>
-      <button className="drum-pad" id='A' onClick={() => this.togglePlay(this.state.audios.audio4)} >A</button>
-      <button className="drum-pad" id='S' onClick={() => this.togglePlay(this.state.audios.audio5)} >S</button>
-      <button className="drum-pad" id='D' onClick={() => this.togglePlay(this.state.audios.audio6)} >D</button>
-      <button className="drum-pad" id='Z' onClick={() => this.togglePlay(this.state.audios.audio7)} >Z</button>
-      <button className="drum-pad" id='X' onClick={() => this.togglePlay(this.state.audios.audio8)} >X</button>
-      <button className="drum-pad" id='C' onClick={() => this.togglePlay(this.state.audios.audio9)} >C</button>
-
+      ))}
       <div id='display'>
+        {this.state.currentKey}
       </div>
       </div>
       </div>
