@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Indie+Flower&display=swap');
+
+
+#timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 3px solid;
+    border-radius: 10px;
+    margin: 20px 20px;
+}
+
+div{
+    font-family: 'Comic Neue', cursive;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+#timer-settings{
+    display: flex;
+    flex-direction:row;
+    width: 600px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#timer-settings button{
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#break-label{
+    position: absolute;
+    left:50px;
+    top:90px;
+    font-size: 35px;
+}
+#session-label{
+    position: absolute;
+    right:50px;
+    top:90px;
+    font-size: 35px;
+}
+
+
+#break-length,
+#session-length{
+    font-size: 50px;
+}
+
+#up-icon,
+#down-icon{
+    width: 100px;
+    height: 100px;
+}
+h1{
+    font-size: 100px;
+    font-family: 'Comic Neue', cursive;
+
+}
+
+
+#timer-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+    width: 400px;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 20px;
+    margin-top: -40px;
+
+}
+
+#timer-label{
+    font-size: 50px;
+}
+
+#play-icon,
+#reset-icon{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+#start_stop,
+#reset{
+    background-color: transparent;
+    border: none;
+    margin: 10px;
+
+}
+#time-left{
+    font-size: 40px;
+}
+
+ #info{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 20px
+ }
