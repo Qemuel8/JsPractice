@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import getAudio from '../audio/audio'
 import './drum-machine.css'
-import {useEffect} from 'react';
+
 
 const audio1 = require("../audio/Cev_H2.mp3");
 const audio2 = require("../audio/Dsc_Oh.mp3");
